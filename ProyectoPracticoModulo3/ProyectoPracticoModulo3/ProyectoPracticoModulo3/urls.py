@@ -23,7 +23,5 @@ urlpatterns = [
     url(r'^remove\/(?P<id>[0-9]+)\/{0,1}$', app.views.remove_game),
     url(r'^ranking\/{0,1}$', app.views.ranking),
     url(r'^search\/{0,1}$', app.views.search),
-
-	
     url(r'', app.views.notFound),
 ]

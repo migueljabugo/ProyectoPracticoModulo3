@@ -24,7 +24,13 @@
             <dt>Score</dt>
             <dd>{{game.score}}</dd>
             <dt>Online</dt>
-            <dd>{{game.online}}</dd>
+            <dd>
+                {% if game.online %}
+                    Multiplayer
+                {% else %}
+                    Singleplayer
+                {% endif %}
+            </dd>
             <dt>PEGI</dt>
             <dd>{{game.pegi}}</dd>
         </dl>
