@@ -55,6 +55,9 @@
     <Folder Include="ProyectoPracticoModulo3\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\app\content\style.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\templates\app\404.html" />
     <Content Include="app\templates\app\form_game.html" />
     <Content Include="app\templates\app\form_search.html" />

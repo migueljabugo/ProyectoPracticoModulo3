@@ -4,13 +4,15 @@
 
 <h2>Ranking</h2>
 <div class="col-xs-12">
-    <table class="table">
+    <table class="table table-striped">
         <tr>
+            <th>#</th>
             <th>Game</th>
             <th>Score</th>
         </tr>
         {% for name, score, id in games %}
         <tr>
+            <th scope="row">{{ forloop.counter }}</th>
             <td><a href="/game/{{id}}">{{name}}</a></td>
             <td>{{score}}</td>
         </tr>

@@ -118,9 +118,7 @@ def search(request):
 		if(len(games)>0):
 			return HttpResponseRedirect('/game/'+str(games[0].id))
 		else:
-			return HttpResponseRedirect('/')
-
-
+			return HttpResponseRedirect('/search')
 
 	elif (request.method == 'GET'):
 		return render(

@@ -7,15 +7,21 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/style.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
 <body>
-    <div class="container body-content">
-        <div class="container">
-            <a href="/"><h1>VideoGames Codex</h1></a>
-        </div>
+    <div class="container">
+        <a style="text-decoration: none" href="/">
+            <div class="jumbotron text-center">
+                <h1>VideoGames Codex</h1>
+            </div>
+        </a>
+    </div>
 
+    <div class="container body-content">
+        
 {% block content %}{% endblock %}
         <hr/>
         <footer>
