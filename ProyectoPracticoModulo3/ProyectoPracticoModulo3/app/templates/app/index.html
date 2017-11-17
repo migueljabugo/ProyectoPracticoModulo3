@@ -1,0 +1,36 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Game List</h3>
+        <a class="btn btn-primary" href="/new">New Game</a>
+        <a class="btn btn-primary" href="/ranking">Ranking</a>
+        <a class="btn btn-primary" href="/search">Search Game</a>
+    </div>
+    <div class="col-xs-12">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Publisher</th>
+                <th>Genre</th>
+                <th></th>
+            </tr>
+
+            {% for game in games %}
+            <tr>
+                <td>{{game.name}}</td>
+                <td>{{game.publisher}}</td>
+                <td>{{game.get_genre_display}}</td>
+                <td><a class="btn btn-success" href="/game/{{game.pk}}">Show</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+{% endblock %}

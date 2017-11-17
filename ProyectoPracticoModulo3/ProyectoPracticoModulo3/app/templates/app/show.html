@@ -1,0 +1,37 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{game.name}}</h2>
+<div class="panel panel-default">
+    <div class="panel-heading text-right">
+        <a href="/edit/{{game.id}}" class="btn btn-warning col-sx-1">Edit</a>
+        <a href="/remove/{{game.id}}" onclick="return confirm('¿Desea eliminar este juego?');" class="btn btn-danger col-sx-1">Remove</a>
+    </div>
+    
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>Name</dt>
+            <dd>{{game.name}}</dd>
+            <dt>Publisher</dt>
+            <dd>{{game.publisher}}</dd>
+            <dt>Year</dt>
+            <dd>{{game.year}}</dd>
+            <dt>Genre</dt>
+            <dd>{{game.get_genre_display}}</dd>
+            <dt>Platform</dt>
+            <dd>{{game.get_platform_display}}</dd>
+            <dt>Score</dt>
+            <dd>{{game.score}}</dd>
+            <dt>Online</dt>
+            <dd>{{game.online}}</dd>
+            <dt>PEGI</dt>
+            <dd>{{game.pegi}}</dd>
+        </dl>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
